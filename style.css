@@ -241,11 +241,53 @@ section .do-me .do-inner .content p{
     font-size: 1.15rem;
 }
 /* do-inner 클래스에 마우스를 올리면 배경색과 텍스트 색상 변경 */
-section .do-me .do_inner:hover{
+section .do-me .do-inner:hover{
     background-color: lightcoral;
     color:white;
 }
-/* do-inner 클래스에 마우스를 올리면 아이콘 폰트 색상 변경 */
+/* do-inner 클래스에 마우스를 올리면 아이콘 폰트 색상 변경 (hover 가상 클래스 선택자를 사용해 처리 */
 section .do-me .do-inner:hover i{
     color:white;
+}
+/* 배경 영억 */
+.bg{
+    background:url('./img/bg.jpg') center center;
+    background-size:cover;
+    background-attachment:fixed;
+    height:650px;
+ }
+ /* clear 속성으로 float 속성값 해제 */
+ section.portfolio::after{
+    content: "";
+    display: block;
+    clear: both;
+ }
+ /* portfolio inner 사각형 꾸미기 */
+ section.portfolio .portfolio-inner{
+    width: 30%;
+    margin-right: 5%;
+    padding: 1rem 1rem 1.5rem 1rem;
+    float:left;
+    background-color: #f8f8f8;
+    border:1px solid #ccc;
+    margin-bottom: 3rem;
+ }
+ /* 3번째마다 margin-right 0적용 */
+section.portfolio .portfolio-inner:nth-child(3n){
+    margin-right: 0;
+}
+/* 이미지 크기가 부모 요소를 넘지 않도록 100%로 지정 */
+section.portfolio .portfolio-inner img{
+    width: 100%;
+    display: block;
+}
+/* strong 태그 색상과 간격 */
+section.portfolio .portfolio-inner strong{
+    color: #ff6a6a;
+    margin: 0.5rem 0;
+    display: block;
+}
+/* h3 태그 색상과 간격 */
+section.portfolio .portfolio-inner h3{
+    font-size: 1.75rem;
 }
