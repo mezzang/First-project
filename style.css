@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;800&family=Varela+Round&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
@@ -16,8 +20,8 @@ li{
     margin: 0 auto;
 }
 header{
-    position:absolute;
-    color:black;
+    position:fixed;
+    color:white;
     top:0;
     z-index:1;
     width:100%;
@@ -47,6 +51,7 @@ header h1 button{
 }
 header nav ul li button{
     font-size: 1.2rem;
+    color:white;
 }
 
 main{
@@ -74,7 +79,7 @@ main p{
     margin:0 auto;
     font-size:1.25rem;
 }
-
+/*메인 영역 버튼 설정*/
 main button.download{
     background-color: transparent;
     border: 3px solid white;
@@ -98,7 +103,7 @@ main button.mouse{
     animation:upDown 1s ease-in-out infinite;
     cursor: pointer;
 }
-@keyframes upDown{
+@keyframes upDown{ /*애니메이션 upDown 요소*/
     0%{
         bottom: 1rem;
     }
@@ -107,5 +112,28 @@ main button.mouse{
     }
     100%{
         bottom:1rem;
+    }
+}
+
+/*텍스트 타이핑 효과 구현하기*/
+main h2 span::after{
+    content:"";
+    height: 40px;
+    width: 3px;
+    background-color: #fff;
+    display:inline-block;
+    animation: blink .7s ease-in-out infinite;
+    letter-spacing: 3px;
+    font-family: "Varela Round", sans-serif;
+}
+/*::after 가상 요소 선택자로 텍스트 마지막에 너비 3px, 높이 40px 크기의 배경색이 투명한 막대를 만들고
+    애니메이션을 넣어서 막대 부분이 커서가 깜빡이는 것처럼 보이게!
+     구현합니다*/
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
     }
 }
