@@ -291,3 +291,84 @@ section.portfolio .portfolio-inner strong{
 section.portfolio .portfolio-inner h3{
     font-size: 1.75rem;
 }
+/* contact with me */
+section.contact .contact-me::after { /*section.contact .contact-me 의 끝에 가상의 요소를 생성한다.
+                                        이는 실제로 화면에 표시되지 않지만, 레이아웃에 영향을 미칩니다.*/
+    content:"";
+    display:block;
+    clear:both;
+}
+section.contact .contact-me .left{
+    width: 30%;
+    float:left;
+}
+section.contact .contact-me .right{
+    float: left;
+    width:65%;
+    margin-left: 5%;
+}
+section.contact .contact-me .left .card{
+    border: 1px solid #ccc;
+    padding:1rem;
+    display:flex;
+    align-items:center;
+    margin-bottom:1.25rem;
+}
+section.contact .contact-me .left .card .icon i{
+    font-size: 2rem;
+    margin-right: 15px;
+}
+/* 본문 오른쪽 */
+section.contact .contact-me .right{
+    float: left;
+    width: 65%;
+    margin-left: 5%;
+    margin-bottom: 2rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+/* 폼 요소는 form-group 클래스를 가지고 있는 div태그로 그룹화되어 있다. 다음 코드처럼 선택자로 지정해 CSS속성을 적용하면 된다. */
+/* form-group 사이 간격 지정 */
+section.contact .contact-me .right .form-group{
+    margin-bottom: 1.25rem;
+}
+/* label 태그가 인라인 성격이어서 외부 여백을 적용하기 위해 block으로 변경 */
+section.contact .contact-me .right .form-group label{
+    display: block;
+    margin-bottom: 0.85rem;
+}
+/* input 요소 꾸미기 */
+section.contact .contact-me .right .form-group input{
+    padding: 0.625rem;
+    width:100%;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+/* :focus 가상 클래스 선택자로 입력 요소에 커서가 활성화되면 파란색 테두리와 그림자 효과 추가 */
+section.contact .contact-me .right .form-group input:focus {
+    border: 1px solid #719ECE;
+    box-shadow:0 0 10px #719ECE;
+}
+/* textarea 요소 꾸미기 */
+section.contact .contact-me .right .form-group textarea{
+    height: 300px;
+    width: 100%;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+/* textarea 요소에 커서가 활성화가 되면 파란색 테두리와 그림자 효과 추가 */
+section.contact .contact-me .right .form-group textarea:focus {
+    outline: none;
+    border: 1px solid #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+}
+/* 버튼 요소 꾸미기 */
+section.contact .contact-me .right button{
+    width: 100%;
+    padding: 1rem;
+    background-color: #f78b00;
+    border: none;
+    color: white;
+}
